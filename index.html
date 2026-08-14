@@ -159,8 +159,8 @@
     <!-- WRAPPER UTAMA -->
     <div class="desktop-frame">
 
-        <!-- COVER / HALAMAN DEPAN (Menggunakan dvh agar pas di layar HP tanpa tertutup toolbar browser) -->
-        <section id="cover" class="active-flower flex flex-col items-center justify-end pb-12 bg-cover bg-center px-6 pt-8 text-center relative overflow-hidden" style="background-image: url('background cover.jpg'); min-height: 100dvh; height: 100dvh;">
+        <!-- COVER / HALAMAN DEPAN (Dinaikkan sedikit agar pas di dada mempelai dan tidak menutupi wajah) -->
+        <section id="cover" class="active-flower flex flex-col items-center justify-end pb-28 bg-cover bg-center px-6 pt-8 text-center relative overflow-hidden" style="background-image: url('background cover.jpg'); min-height: 100dvh; height: 100dvh;">
             <img src="bunga1.png" alt="Bunga Hiasan" class="flower-tl">
             <img src="bunga1.png" alt="Bunga Hiasan" class="flower-br">
 
@@ -712,6 +712,7 @@
             const distance = weddingDate - now;
             if(distance > 0) {
                 document.getElementById("days").innerText = Math.floor(distance / (1000 * 60 * 60 * 24));
+                distance % (1000 * 60 * 60 * 24)
                 document.getElementById("hours").innerText = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
                 document.getElementById("minutes").innerText = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
                 document.getElementById("seconds").innerText = Math.floor((distance % (1000 * 60)) / 1000);
